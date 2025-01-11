@@ -9,7 +9,10 @@ def add_task(new_task,list):
 
 #defined a function for viewing tasks
 def view_tasks(list):
-    return print ("\nYour To-Do List:",*list,sep="\n")
+    if list == []:
+        return print ("\nThere are no tasks to view!")
+    else:
+        return print ("\nYour To-Do List:",*list,sep="\n")
 
 #defined a function to mark a task as complete if the task is in the list. If not, it returns text.
 def complete_task(selected_task,list):
